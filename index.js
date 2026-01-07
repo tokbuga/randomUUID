@@ -3,7 +3,7 @@ const u32 = new Uint32Array(f64.buffer, 0, 1);
 const u16 = new Uint16Array(f64.buffer, 4, 3);
 const u64 = new BigUint64Array(f64.buffer, 8, 1);
 
-window.randomUUID = () => (
+window.turboUUID = () => (
     f64[0] = Math.random(),
     f64[1] = Math.random()) && (
         u32[0].toString(16).padEnd(8, 0).concat("-")
@@ -25,8 +25,8 @@ function benchmark() {
 
     tLen = max;
     t0 = performance.now();
-    while (tLen--) window.randomUUID();
+    while (tLen--) window.turboUUID();
     dt = performance.now() - t0;
-    console.log("window.randomUUID:", dt, window.randomUUID());
-    // window.randomUUID: 426.0099997520447 f1235820-f090-3fce-a0d6-af6e26c6a0d6
+    console.log("window.turboUUID:", dt, window.turboUUID());
+    // window.turboUUID: 426.0099997520447 f1235820-f090-3fce-a0d6-af6e26c6a0d6
 }

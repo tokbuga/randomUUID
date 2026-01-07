@@ -1,17 +1,17 @@
 {
-  "name": "fstuid",
-  "version": "0.0.1",
+  "name": "turbouuid",
+  "version": "0.0.3",
   "description": "Fast uuid generator / an alternative for crypto.randomUUID",
   "keywords": [
     "uuid"
   ],
-  "homepage": "https://github.com/tokbuga/randomuuid#readme",
+  "homepage": "https://github.com/tokbuga/turbouuid#readme",
   "bugs": {
-    "url": "https://github.com/tokbuga/randomuuid/issues"
+    "url": "https://github.com/tokbuga/turbouuid/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tokbuga/randomuuid.git"
+    "url": "git+https://github.com/tokbuga/turbouuid.git"
   },
   "license": "MIT",
   "author": "Özgür Fırat Özpolat",

@@ -1,6 +1,6 @@
 {
-  "name": "fastuuid",
-  "version": "1.0.0",
+  "name": "fstuid",
+  "version": "0.0.1",
   "description": "Fast uuid generator / an alternative for crypto.randomUUID",
   "keywords": [
     "uuid"

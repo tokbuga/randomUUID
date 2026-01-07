@@ -1,15 +1,15 @@
-# fastuuid
+# fstuid
 
 Fast UUID generator / an alternative for `crypto.randomUUID`.
 
-Designed for performance-critical applications, `fastuuid` uses a pre-allocated buffer strategy to generate UUIDs significantly faster than the native implementation.
+Designed for performance-critical applications, `fstuid` uses a pre-allocated buffer strategy to generate UUIDs significantly faster than the native implementation.
 
 ## Performance
 
 Benchmarks ran on 1,000,000 iterations show a massive performance gain:
 
 -   **crypto.randomUUID**: ~1138ms
--   **fastuuid**: ~426ms
+-   **fstuid**: ~426ms
 
 🚀 **~2.6x faster** than the native solution.
 
@@ -18,7 +18,7 @@ Benchmarks ran on 1,000,000 iterations show a massive performance gain:
 The library attaches directly to `window.randomUUID` for browser environments.
 
 ```javascript
-require('fastuuid');
+require('fstuid');
 
 // Returns a standard v4-like UUID string
 console.log(window.randomUUID());
@@ -27,7 +27,7 @@ console.log(window.randomUUID());
 
 ## How It Works
 
-Instead of re-allocating memory for every generation, `fastuuid` reuses a set of TypedArrays (`Float64Array`, `Uint32Array`, `Uint16Array`, `BigUint64Array`) sharing the same buffer. This minimizes garbage collection overhead and maximizes throughput.
+Instead of re-allocating memory for every generation, `fstuid` reuses a set of TypedArrays (`Float64Array`, `Uint32Array`, `Uint16Array`, `BigUint64Array`) sharing the same buffer. This minimizes garbage collection overhead and maximizes throughput.
 
 ## License
 

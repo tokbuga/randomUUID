@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="module">
+        import "./index.js"
+
+        turboUUID.base().then(base => {
+
+            const uuid = turboUUID();
+            const value = 2412; //integer
+
+            const setValue = base.setValue(uuid, value);
+            const indexOf = base.indexOf(uuid);
+            const uuidAt = base.uuidAt(0);
+            const has = !!base.has(uuid);
+            const count = base.count();
+            const valueOf = base.valueOf(uuid);
+            const randomUUID = base.randomUUID(value);
+
+            console.warn(base);
+            console.log(`const uuid  = \x1b[32m"${uuid}"\x1b[0m`, ";");
+            console.log(`const value =`, value, ";");
+            console.group(`base calls:`);
+            console.log(`base.setValue(\x1b[34m${uuid}, ${value}\x1b[0m)`.padEnd(70).concat("-->"), setValue);
+            console.log(`base.indexOf(\x1b[35m${uuid}\x1b[0m)`.padEnd(70).concat("-->"), indexOf);
+            console.log(`base.uuidAt(\x1b[36m${indexOf}\x1b[0m)`.padEnd(70).concat("-->"), uuidAt);
+            console.log(`base.has(\x1b[33m${uuid}\x1b[0m)`.padEnd(70).concat("-->"), has);
+            console.log(`base.count(\x1b[31m\x1b[0m)`.padEnd(70).concat("-->"), count);
+            console.log(`base.valueOf(\x1b[31m${uuid}\x1b[0m)`.padEnd(70).concat("-->"), valueOf);
+            console.log(`base.randomUUID(\x1b[33m${value}\x1b[0m)`.padEnd(70).concat("-->"), randomUUID);
+            console.groupEnd(`base calls:`);
+        })
+    </script>
+</head>
+
+</html>
